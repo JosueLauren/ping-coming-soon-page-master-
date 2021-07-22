@@ -114,3 +114,30 @@ p.copy {
     color: var(--Gray);
 }
 
+@media(max-width: 800px){
+    h1.titulo {
+        font-size: 1.8em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    input[type='email']{
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+    }
+
+    button.btn {
+        width: 100%;
+    }
+
+    section.imagem {
+        width: 80%;
+        margin: 30px auto 100px auto;
+    }
+}
+
