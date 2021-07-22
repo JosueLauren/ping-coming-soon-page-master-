@@ -74,6 +74,15 @@ button.btn:hover {
     background-color: hsla(223, 87%, 63%, 0.7) ;
 }
 
+.msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 20px;
+    text-align: left;
+
+}
+
 section.imagem {
     width: 50%;
     margin: 20px auto;
@@ -138,6 +147,11 @@ p.copy {
     section.imagem {
         width: 80%;
         margin: 30px auto 100px auto;
+    }
+
+    .msg {
+        text-align: center;
+        margin-left: 0px;
     }
 }
 

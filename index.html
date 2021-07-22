@@ -16,10 +16,11 @@
     <img src="images/logo.svg" alt="logo">
     <h1 class="titulo">We are launching <span>soon!</span></h1>
     <p class="descrição">Subscribe and get notified</p>
-    <form action="#">
+    <form action="#" id="form">
       <input type="email" name="email" id="email" placeholder="Your email address...">
       <button class="btn">Notify Me</button>
     </form>
+    <p class="msg"></p>
   </header>
   <section class="imagem"><img src="images/illustration-dashboard.png" alt="illustration-dashboard"></section>
   <footer class="rodapé">
@@ -31,4 +32,32 @@
     <p class="copy">&copy; Copyright Ping. All rights reserved.</p>
   </footer>
 </body>
+<script>
+  document.querySelector('#form').addEventListener('submit', (event) => {
+    event.preventDefault()
+    let email = document.querySelector('#email')
+
+    if(email.value.trim() === '' || !email.value.includes('@')){
+        document.querySelector('.msg').innerText= 'Please provide a valid email address'
+        email.placeholder = 'example@email/com'
+
+
+        setTimeout(()=> {
+          document.querySelector('.msg').innerText = ''
+        },1000)
+
+        return 
+    }
+
+    document.querySelector('#form').style.display = 'none'
+    
+    setTimeout(()=> {
+      document.querySelector('.msg').style.color = 'green'
+      document.querySelector('.msg').style.textAlign = 'center'
+      document.querySelector('.msg').innerText = 'E-mail enviado com sucesso!'
+
+    },1000)
+
+  })
+</script>
 </html>
